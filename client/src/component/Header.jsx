@@ -69,6 +69,11 @@ class Header extends Component {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, {});
+});
+
 const mapStateToProps = ({ auth }) => {
   return { auth };
 };
