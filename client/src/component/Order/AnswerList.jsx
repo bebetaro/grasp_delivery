@@ -66,7 +66,7 @@ class AnswerList extends Component {
     return (
       <div className="container">
         <h3>Answer Form</h3>
-        <table className="row highlight centered">
+        <table className="responsive-table highlight centered">
           <thead>
             <tr>
               <th>Cutomer Name</th>

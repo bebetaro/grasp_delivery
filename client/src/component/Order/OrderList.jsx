@@ -46,7 +46,7 @@ class OrderList extends Component {
     return (
       <div className="container">
         <h3>Order List</h3>
-        <table className="highlight centered">
+        <table className="responsive-table highlight centered">
           <thead>
             <tr>
               <th>Drawing Number</th>
