@@ -40,21 +40,23 @@ class Login extends Component {
   render() {
     const { handleSubmit, formValues, submitSignin } = this.props; // pass using function or something from props
     return (
-      <div className="row">
-        <form
-          className="col s6 push-s3"
-          style={{ marginTop: '70px' }}
-          onSubmit={handleSubmit(() => submitSignin(formValues.values))}
-        >
-          {this.renderFields()}
-          <Link to="/" className="red btn-flat white-text">
-            Cancel
-          </Link>
-          <button type="submit" className="teal btn-flat right white-text">
-            Login
-            <i className="material-icons right">send</i>
-          </button>
-        </form>
+      <div className="container">
+        <div className="row">
+          <form
+            className="col s6 push-s3"
+            style={{ marginTop: '70px' }}
+            onSubmit={handleSubmit(() => submitSignin(formValues.values))}
+          >
+            {this.renderFields()}
+            <Link to="/" className="red btn-flat white-text">
+              Cancel
+            </Link>
+            <button type="submit" className="teal btn-flat right white-text">
+              Login
+              <i className="material-icons right">send</i>
+            </button>
+          </form>
+        </div>
       </div>
     );
   }
