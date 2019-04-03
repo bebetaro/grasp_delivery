@@ -11,18 +11,13 @@ class Landing extends Component {
     } else {
       return (
         <div className="container">
-          <div className="row">
-            <div className="col s6 push-s3" style={{ marginTop: '50px' }}>
-              <Link to="/login" className="waves-effect waves-light btn">
-                Log in
-              </Link>
-              <Link
-                to="/register"
-                className="waves-effect waves-light btn right"
-              >
-                Sign up
-              </Link>
-            </div>
+          <div className="col s6 push-s3" style={{ marginTop: '50px' }}>
+            <Link to="/login" className="waves-effect waves-light btn">
+              Log in
+            </Link>
+            <Link to="/register" className="waves-effect waves-light btn right">
+              Sign up
+            </Link>
           </div>
         </div>
       );
@@ -33,7 +28,7 @@ class Landing extends Component {
     return (
       <div className="container">
         <div className="row">
-          <h1 className="col s12 offset-s3">Grasp Delivery</h1>
+          <h1 className="center-align">Grasp Delivery</h1>
           {this.changeRender()}
         </div>
       </div>

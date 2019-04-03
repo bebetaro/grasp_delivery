@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import M from 'materialize-css/dist/js/materialize.min.js';
+import 'materialize-css/dist/css/materialize.min.css';
+
 import * as actions from '../actions';
 
 class Header extends Component {
+  componentDidMount() {
+    const elem = document.querySelector('.sidenav');
+    M.Sidenav.init(elem, {
+      edge: 'left',
+      inDuration: 250
+    });
+  }
+
   renderContent() {
     if (this.props.auth) {
       return (
         <div>
           <li>
-            <Link to="/user">User</Link>
+            <Link to="/user">USER</Link>
           </li>
           <li>
-            <Link to="/answer">Answer</Link>
+            <Link to="/answer">ANSWER</Link>
           </li>
 
           <li>
@@ -21,12 +32,6 @@ class Header extends Component {
         </div>
       );
     }
-  }
-
-  renderSideNav() {
-    <ul id="slide-out" classname="sidenav">
-      {this.renderContent()}
-    </ul>;
   }
 
   renderTopLink() {
@@ -38,7 +43,7 @@ class Header extends Component {
       );
     } else {
       return (
-        <Link to="/" className="brand-logo">
+        <Link to="/" className="brand-logo center-align">
           GraspDelivery
         </Link>
       );
@@ -48,31 +53,23 @@ class Header extends Component {
   render() {
     return (
       <nav className="container">
-        <div className="row">
-          <div className="nav-wrapper blue">
-            <a
-              href="#"
-              data-target="slide-out"
-              class="sidenav-trigger show-on-small"
-            >
-              <i class="material-icons">menu</i>
-            </a>
-            {this.renderSideNav()}
-            {this.renderTopLink()}
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-              {this.renderContent()}
-            </ul>
+        <div className="nav-wrapper blue">
+          <ul id="slide-out" class="sidenav">
+            {this.renderContent()}
+          </ul>
+          <div
+            data-target="slide-out"
+            className="sidenav-trigger hide-on-large-only"
+          >
+            <i class="material-icons">menu</i>
           </div>
+          {this.renderTopLink()}
+          <ul className="right hide-on-med-and-down">{this.renderContent()}</ul>
         </div>
       </nav>
     );
   }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, {});
-});
 
 const mapStateToProps = ({ auth }) => {
   return { auth };
