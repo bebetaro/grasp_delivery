@@ -23,6 +23,12 @@ class Header extends Component {
     }
   }
 
+  renderSideNav() {
+    <ul id="slide-out" classname="sidenav">
+      {this.renderContent()}
+    </ul>;
+  }
+
   renderTopLink() {
     if (this.props.auth) {
       return (
@@ -42,11 +48,21 @@ class Header extends Component {
   render() {
     return (
       <nav className="container">
-        <div className="nav-wrapper blue">
-          {this.renderTopLink()}
-          <ul id="nav-mobile" className="right">
-            {this.renderContent()}
-          </ul>
+        <div className="row">
+          <div className="nav-wrapper blue">
+            <a
+              href="#"
+              data-target="slide-out"
+              class="sidenav-trigger show-on-small"
+            >
+              <i class="material-icons">menu</i>
+            </a>
+            {this.renderSideNav()}
+            {this.renderTopLink()}
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
+              {this.renderContent()}
+            </ul>
+          </div>
         </div>
       </nav>
     );

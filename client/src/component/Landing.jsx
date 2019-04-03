@@ -10,13 +10,20 @@ class Landing extends Component {
       return <Dashboard />;
     } else {
       return (
-        <div className="col s6 push-s3" style={{ marginTop: '50px' }}>
-          <Link to="/login" className="waves-effect waves-light btn">
-            Log in
-          </Link>
-          <Link to="/register" className="waves-effect waves-light btn right">
-            Sign up
-          </Link>
+        <div className="container">
+          <div className="row">
+            <div className="col s6 push-s3" style={{ marginTop: '50px' }}>
+              <Link to="/login" className="waves-effect waves-light btn">
+                Log in
+              </Link>
+              <Link
+                to="/register"
+                className="waves-effect waves-light btn right"
+              >
+                Sign up
+              </Link>
+            </div>
+          </div>
         </div>
       );
     }
