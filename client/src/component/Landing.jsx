@@ -11,8 +11,8 @@ class Landing extends Component {
     } else {
       return (
         <div className="container">
+          <h1 className="center-align">Grasp Delivery</h1>
           <div className="col s6 push-s3" style={{ marginTop: '50px' }}>
-            <h1 className="center-align">Grasp Delivery</h1>
             <Link to="/login" className="waves-effect waves-light btn">
               Log in
             </Link>
