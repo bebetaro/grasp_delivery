@@ -54,14 +54,14 @@ class Header extends Component {
     return (
       <nav className="container">
         <div className="nav-wrapper blue">
-          <ul id="slide-out" class="sidenav">
+          <ul id="slide-out" className="sidenav">
             {this.renderContent()}
           </ul>
           <div
             data-target="slide-out"
             className="sidenav-trigger hide-on-large-only"
           >
-            <i class="material-icons">menu</i>
+            <i className="material-icons">menu</i>
           </div>
           {this.renderTopLink()}
           <ul className="right hide-on-med-and-down">{this.renderContent()}</ul>

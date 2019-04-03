@@ -10,7 +10,7 @@ class Landing extends Component {
       return (
         <div className="container">
           <h1 className="center-align">Grasp Delivery</h1>
-          <div className="col s6 push-s3" style={{ marginTop: '50px' }}>
+          <div className="col s10 center-align" style={{ marginTop: '50px' }}>
             <Link to="/login" className="waves-effect waves-light btn">
               Log in
             </Link>
