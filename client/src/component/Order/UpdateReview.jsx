@@ -43,7 +43,7 @@ class UpdateReview extends Component {
           onClick={() =>
             this.props.updateOrder(this.props.formValue, this.props.history)
           }
-          className="green btn-flat right white-text"
+          className="green btn-flat right white-text waves-effect"
         >
           Submit
         </button>

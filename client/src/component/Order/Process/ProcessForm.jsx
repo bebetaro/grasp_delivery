@@ -25,6 +25,7 @@ class ProcessForm extends Component {
           label="Worker Name"
           component={inputField}
         />
+
         <label htmlFor="image">ProcessImage</label>
         <input
           type="file"
@@ -34,9 +35,16 @@ class ProcessForm extends Component {
             this.setState({ file: e.target.files[0] });
           }}
         />
+
         <div style={{ marginTop: '20px' }}>
-          <button onClick={reset}>Clear</button>
           <button
+            className="red waves-effect btn-flat white-text"
+            onClick={reset}
+          >
+            Clear
+          </button>
+          <button
+            className="grey waves-effect btn-flat white-text"
             type="submit"
             onClick={handleSubmit(() =>
               submitProcess(formValue, this.state.file, id)

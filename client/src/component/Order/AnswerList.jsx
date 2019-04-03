@@ -44,13 +44,17 @@ class AnswerList extends Component {
 
           <td>
             <Link to={`/answer/${id}`}>
-              <button>Answer</button>
+              <button className="grey waves-effect btn-flat white-text">
+                Answer
+              </button>
             </Link>
           </td>
 
           <td>
             <Link to={`/process/${id}`}>
-              <button>Process</button>
+              <button className="grey waves-effect btn-flat white-text">
+                Process
+              </button>
             </Link>
           </td>
         </tr>
@@ -77,7 +81,10 @@ class AnswerList extends Component {
 
           <tbody>{this.renderAnswerList()}</tbody>
         </table>
-        <Link to="/mypage" className="pink lighten-1 btn-flat white-text">
+        <Link
+          to="/mypage"
+          className="pink lighten-1 btn-flat white-text waves-effect"
+        >
           BACK
         </Link>
       </div>

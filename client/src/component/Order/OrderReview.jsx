@@ -46,7 +46,7 @@ class OrderReview extends Component {
           </button>
           <button
             onClick={() => submitOrder(formValues, history, this.state.file)}
-            className="green btn-flat right white-text"
+            className="green btn-flat right white-text waves-effect"
           >
             Submit
           </button>

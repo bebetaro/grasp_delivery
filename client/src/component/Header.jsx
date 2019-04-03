@@ -34,6 +34,27 @@ class Header extends Component {
     }
   }
 
+  renderSideNav() {
+    if (this.props.auth) {
+      return this.renderContent();
+    } else {
+      return (
+        <React.Fragment>
+          <li>
+            <Link to="/login" className="waves-effect">
+              Log in
+            </Link>
+          </li>
+          <li>
+            <Link to="/register" className="waves-effect">
+              Sign up
+            </Link>
+          </li>
+        </React.Fragment>
+      );
+    }
+  }
+
   renderTopLink() {
     if (this.props.auth) {
       return (
@@ -55,7 +76,7 @@ class Header extends Component {
       <nav className="container">
         <div className="nav-wrapper blue">
           <ul id="slide-out" className="sidenav">
-            {this.renderContent()}
+            {this.renderSideNav()}
           </ul>
           <div
             data-target="slide-out"

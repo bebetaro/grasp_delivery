@@ -68,7 +68,7 @@ class AnswerForm extends Component {
           </Link>
           <button
             type="submit"
-            className="teal btn-flat right white-text"
+            className="teal btn-flat right white-text waves-effect"
             onClick={() => {
               submitAnswer(values, history);
             }}

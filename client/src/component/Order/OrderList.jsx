@@ -24,11 +24,14 @@ class OrderList extends Component {
           <td>{order.process}</td>
           <td>
             <Link to={`/update/order/${order._id}`}>
-              <button>Edit</button>
+              <button className="grey waves-effect btn-flat white-text">
+                Edit
+              </button>
             </Link>
           </td>
           <td>
             <button
+              className="grey waves-effect btn-flat white-text"
               onClick={() => this.props.deleteOrder(order._id, order.designUrl)}
             >
               Delete

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { reduxForm } from "redux-form";
+import React, { Component } from 'react';
+import { reduxForm } from 'redux-form';
 
-import OrderForm from "./OrderForm";
-import OrderReview from "./OrderReview";
+import OrderForm from './OrderForm';
+import OrderReview from './OrderReview';
 
 class NewOrder extends Component {
   state = { showFormReview: false };
@@ -20,8 +20,8 @@ class NewOrder extends Component {
     );
   }
   render() {
-    return <div>{this.renderContent()}</div>;
+    return <div className="container">{this.renderContent()}</div>;
   }
 }
 
-export default reduxForm({ form: "orderForm" })(NewOrder);
+export default reduxForm({ form: 'orderForm' })(NewOrder);

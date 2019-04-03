@@ -9,7 +9,10 @@ class Dashboard extends Component {
       <div className="container">
         <OrderList />
         <div className="fixed-action-btn">
-          <Link to="/new/order" className="btn-floating btn-large red">
+          <Link
+            to="/new/order"
+            className="btn-floating btn-large red waves-effect"
+          >
             <i className="material-icons">add</i>
           </Link>
         </div>
