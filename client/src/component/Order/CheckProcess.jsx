@@ -14,11 +14,11 @@ class CheckProcess extends Component {
     const { delivery, reciever } =
       this.props.order === null ? '' : this.props.order;
     return (
-      <React.Fragment>
+      <div className="container">
         <h3>Estimated Delivery: {delivery}</h3>
         <h3>Supplier name: {reciever}</h3>
         <Showprocess id={id} />
-      </React.Fragment>
+      </div>
     );
   }
 }
