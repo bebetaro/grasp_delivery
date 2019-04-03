@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-
-import Dashboard from './Dashboard';
 
 class Landing extends Component {
   changeRender() {
     if (this.props.auth) {
-      return <Dashboard />;
+      return this.props.history.push('/mypage');
     } else {
       return (
         <div className="container">
@@ -38,4 +36,4 @@ function mapStateToProps({ auth }) {
   return { auth };
 }
 
-export default connect(mapStateToProps)(Landing);
+export default connect(mapStateToProps)(withRouter(Landing));
