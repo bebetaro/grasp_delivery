@@ -7,7 +7,6 @@ import Header from './Header';
 import Dashboard from './Dashboard';
 import Register from './Signin/Register';
 import UserPage from './UserPage';
-import afterSignup from './Signin/afterSignup';
 import Landing from './Landing';
 import Login from './Login';
 import NewOrder from './Order/NewOrder';
@@ -33,7 +32,6 @@ class App extends Component {
             <Route exact path="/user" component={UserPage} />
             <Route exact path="/mypage" component={Dashboard} />
             <Route exact path="/register" component={Register} />
-            <Route exact path="/register/redirect" component={afterSignup} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/new/order" component={NewOrder} />
             <Route

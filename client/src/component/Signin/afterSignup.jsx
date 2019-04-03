@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 const afterSignup = ({ history }) => {
@@ -11,4 +11,4 @@ const afterSignup = ({ history }) => {
   ); // After setTimeout put arrow function because have to wait 5seconds
 };
 
-export default withRouter(afterSignup);
+export default withRouter(afterSignup);*/
