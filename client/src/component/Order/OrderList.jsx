@@ -41,7 +41,7 @@ class OrderList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h3>Order List</h3>
         <table className="highlight centered">
           <thead>

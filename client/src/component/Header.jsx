@@ -41,7 +41,7 @@ class Header extends Component {
 
   render() {
     return (
-      <nav>
+      <nav className="container">
         <div className="nav-wrapper blue">
           {this.renderTopLink()}
           <ul id="nav-mobile" className="right">

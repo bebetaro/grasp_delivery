@@ -60,7 +60,7 @@ class AnswerList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h3>Answer Form</h3>
         <table className="row highlight centered">
           <thead>

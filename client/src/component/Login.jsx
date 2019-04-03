@@ -48,10 +48,13 @@ class Login extends Component {
             onSubmit={handleSubmit(() => submitSignin(formValues.values))}
           >
             {this.renderFields()}
-            <Link to="/" className="red btn-flat white-text">
+            <Link to="/" className="col s4 red btn-flat white-text">
               Cancel
             </Link>
-            <button type="submit" className="teal btn-flat right white-text">
+            <button
+              type="submit"
+              className="col s4 teal btn-flat right white-text"
+            >
               Login
               <i className="material-icons right">send</i>
             </button>
