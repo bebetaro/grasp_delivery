@@ -6,7 +6,7 @@ import OrderList from '../component/Order/OrderList';
 class Dashboard extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <OrderList />
         <div className="fixed-action-btn">
           <Link to="/new/order" className="btn-floating btn-large red">
