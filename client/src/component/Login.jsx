@@ -90,8 +90,7 @@ const mapStatetoProps = state => {
 export default reduxForm({
   form: 'signinForm',
   validate,
-  asyncValidate,
-  asyncBlurFields: ['username', 'password']
+  asyncValidate
 })(
   connect(
     mapStatetoProps,

@@ -11,8 +11,6 @@ const asyncValidationUser = async values => {
   } else if (response.data.answer === 'Wrong') {
     const asyncerror = { password: 'This password is wrong' };
     throw asyncerror;
-  } else {
-    return true;
   }
 };
 

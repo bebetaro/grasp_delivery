@@ -25,10 +25,11 @@ export const submitSignin = values => async dispatch => {
   dispatch({ type: FETCH_USER, payload: res.data }); //payload is gonna be user info and pass it to auth by mapStateToProps
 };
 
+/*
 export const getCompanyList = () => async () => {
   const res = await axios.get('/api/company_list');
-  console.log(res.data);
-};
+  //console.log(res.data);
+};*/
 
 export const submitOrder = (values, history, file) => async () => {
   //values.delivery = values.delivery.toString(); // Change from Date type to String type to store
@@ -89,7 +90,7 @@ export const submitProcess = (value, file, _id) => async dispatch => {
   if (file === null) {
     // if there are no file info, not send file
     const res = await axios.post('/api/process', values);
-    console.log(res.data);
+    //console.log(res.data);
     dispatch({ type: FETCH_PROCESS, payload: res.data });
   } else {
     //else send file info as object and get back URL data
