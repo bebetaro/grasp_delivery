@@ -17,7 +17,7 @@ class Register extends Component {
     // if login is success, redirect to mypage
     //console.log(this.props.auth);
     if (this.props.auth) {
-      this.props.history.push('/mypage'); //here push
+      this.props.history.push('/'); //here push
     }
   }
 
